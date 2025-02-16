@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
+import LoginScreen from '../views/LoginScreen.vue'
+import TestScreen from '../views/TestScreen.vue'
+
 
 const routes = [
 	{
-		name: 'Home',
+		name: 'LoginScreen',
 		path: '/',
-		component: Home
+		component: LoginScreen
 	},
 	{
 		name: 'About',
@@ -13,9 +16,20 @@ const routes = [
 		component: () => import('@/views/About.vue')
 	},
 	{
+		name: 'Home',
+		path: '/Home',
+		component: Home
+	},
+
+	{
 		name: 'Blank',
 		path: '/blank',
 		component: () => import('@/views/Blank.vue')
+	},
+	{
+		test: 'Test',
+		path: '/test',
+		component: TestScreen
 	}
 ]
 
